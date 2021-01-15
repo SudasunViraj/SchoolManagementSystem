@@ -67,6 +67,16 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="sclmgtsys_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sclmgtsys_dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sclmgtsys_dbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sclmgtsys_dbDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SearchExam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +106,12 @@
     </Compile>
     <Compile Include="StudentAgeCalc.Designer.cs">
       <DependentUpon>StudentAgeCalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAudit.Designer.cs">
+      <DependentUpon>StudentAudit.cs</DependentUpon>
     </Compile>
     <Compile Include="SubjectAssign.cs">
       <SubType>Form</SubType>
@@ -128,6 +144,12 @@
     </Compile>
     <Compile Include="TeacherAdmission.Designer.cs">
       <DependentUpon>TeacherAdmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherAudit.Designer.cs">
+      <DependentUpon>TeacherAudit.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateStudent.cs">
       <SubType>Form</SubType>
@@ -171,6 +193,9 @@
     <EmbeddedResource Include="StudentAgeCalc.resx">
       <DependentUpon>StudentAgeCalc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentAudit.resx">
+      <DependentUpon>StudentAudit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubjectAssign.resx">
       <DependentUpon>SubjectAssign.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +220,9 @@
     <EmbeddedResource Include="TeacherAdmission.resx">
       <DependentUpon>TeacherAdmission.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherAudit.resx">
+      <DependentUpon>TeacherAudit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateStudent.resx">
       <DependentUpon>UpdateStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +241,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sclmgtsys_dbDataSet.xsc">
+      <DependentUpon>sclmgtsys_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sclmgtsys_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sclmgtsys_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sclmgtsys_dbDataSet.xss">
+      <DependentUpon>sclmgtsys_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sclmgtsys_dbDataSet1.xsc">
+      <DependentUpon>sclmgtsys_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sclmgtsys_dbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sclmgtsys_dbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sclmgtsys_dbDataSet1.xss">
+      <DependentUpon>sclmgtsys_dbDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -51,6 +51,8 @@ namespace SchoolManagementSystem
             this.updateTeacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentAgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentAuditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teacherAuditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +72,7 @@ namespace SchoolManagementSystem
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip1.Size = new System.Drawing.Size(816, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(816, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -166,9 +168,11 @@ namespace SchoolManagementSystem
             // feedbackToolStripMenuItem
             // 
             this.feedbackToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentAgeToolStripMenuItem});
+            this.studentAgeToolStripMenuItem,
+            this.studentAuditToolStripMenuItem,
+            this.teacherAuditToolStripMenuItem});
             this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
-            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
             this.feedbackToolStripMenuItem.Text = "Additional Functions";
             // 
             // aboutSchoolToolStripMenuItem
@@ -232,6 +236,20 @@ namespace SchoolManagementSystem
             this.studentAgeToolStripMenuItem.Text = "Student Age";
             this.studentAgeToolStripMenuItem.Click += new System.EventHandler(this.studentAgeToolStripMenuItem_Click);
             // 
+            // studentAuditToolStripMenuItem
+            // 
+            this.studentAuditToolStripMenuItem.Name = "studentAuditToolStripMenuItem";
+            this.studentAuditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.studentAuditToolStripMenuItem.Text = "Student Audit";
+            this.studentAuditToolStripMenuItem.Click += new System.EventHandler(this.studentAuditToolStripMenuItem_Click);
+            // 
+            // teacherAuditToolStripMenuItem
+            // 
+            this.teacherAuditToolStripMenuItem.Name = "teacherAuditToolStripMenuItem";
+            this.teacherAuditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.teacherAuditToolStripMenuItem.Text = "Teacher Audit";
+            this.teacherAuditToolStripMenuItem.Click += new System.EventHandler(this.teacherAuditToolStripMenuItem_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,5 +292,7 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.ToolStripMenuItem updateTeacherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateModuleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem studentAgeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem studentAuditToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem teacherAuditToolStripMenuItem;
     }
 }

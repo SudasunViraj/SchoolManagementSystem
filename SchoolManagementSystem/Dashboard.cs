@@ -103,5 +103,17 @@ namespace SchoolManagementSystem
             StudentAgeCalc obj12 = new StudentAgeCalc();
             obj12.ShowDialog();
         }
+
+        private void studentAuditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StudentAudit obj13 = new StudentAudit();
+            obj13.ShowDialog();
+        }
+
+        private void teacherAuditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TeacherAudit obj14 = new TeacherAudit();
+            obj14.ShowDialog();
+        }
     }
 }

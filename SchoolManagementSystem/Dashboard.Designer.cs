@@ -38,14 +38,14 @@ namespace SchoolManagementSystem
             this.examAdmissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchStudentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchTeacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchExamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSchoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.searchTeacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchExamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +126,27 @@ namespace SchoolManagementSystem
             this.searchStudentToolStripMenuItem1.Text = "Search Student";
             this.searchStudentToolStripMenuItem1.Click += new System.EventHandler(this.searchStudentToolStripMenuItem1_Click);
             // 
+            // searchTeacherToolStripMenuItem
+            // 
+            this.searchTeacherToolStripMenuItem.Name = "searchTeacherToolStripMenuItem";
+            this.searchTeacherToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.searchTeacherToolStripMenuItem.Text = "Search Teacher";
+            this.searchTeacherToolStripMenuItem.Click += new System.EventHandler(this.searchTeacherToolStripMenuItem_Click);
+            // 
+            // searchModuleToolStripMenuItem
+            // 
+            this.searchModuleToolStripMenuItem.Name = "searchModuleToolStripMenuItem";
+            this.searchModuleToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.searchModuleToolStripMenuItem.Text = "Search Module";
+            this.searchModuleToolStripMenuItem.Click += new System.EventHandler(this.searchModuleToolStripMenuItem_Click);
+            // 
+            // searchExamToolStripMenuItem
+            // 
+            this.searchExamToolStripMenuItem.Name = "searchExamToolStripMenuItem";
+            this.searchExamToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.searchExamToolStripMenuItem.Text = "Search Exam";
+            this.searchExamToolStripMenuItem.Click += new System.EventHandler(this.searchExamToolStripMenuItem_Click);
+            // 
             // deleteStudentToolStripMenuItem
             // 
             this.deleteStudentToolStripMenuItem.Name = "deleteStudentToolStripMenuItem";
@@ -160,26 +181,6 @@ namespace SchoolManagementSystem
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // searchTeacherToolStripMenuItem
-            // 
-            this.searchTeacherToolStripMenuItem.Name = "searchTeacherToolStripMenuItem";
-            this.searchTeacherToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.searchTeacherToolStripMenuItem.Text = "Search Teacher";
-            this.searchTeacherToolStripMenuItem.Click += new System.EventHandler(this.searchTeacherToolStripMenuItem_Click);
-            // 
-            // searchModuleToolStripMenuItem
-            // 
-            this.searchModuleToolStripMenuItem.Name = "searchModuleToolStripMenuItem";
-            this.searchModuleToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.searchModuleToolStripMenuItem.Text = "Search Module";
-            this.searchModuleToolStripMenuItem.Click += new System.EventHandler(this.searchModuleToolStripMenuItem_Click);
-            // 
-            // searchExamToolStripMenuItem
-            // 
-            this.searchExamToolStripMenuItem.Name = "searchExamToolStripMenuItem";
-            this.searchExamToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.searchExamToolStripMenuItem.Text = "Search Exam";
             // 
             // Dashboard
             // 

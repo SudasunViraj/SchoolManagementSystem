@@ -73,5 +73,11 @@ namespace SchoolManagementSystem
             SearchSubject obj7 = new SearchSubject();
             obj7.ShowDialog();
         }
+
+        private void searchExamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchExam obj8 = new SearchExam();
+            obj8.ShowDialog();
+        }
     }
 }

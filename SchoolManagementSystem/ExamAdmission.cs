@@ -49,7 +49,6 @@ namespace SchoolManagementSystem
         {
             try
             {
-                String module_id = textBox1.Text;
                 SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
                 con.Open();
 

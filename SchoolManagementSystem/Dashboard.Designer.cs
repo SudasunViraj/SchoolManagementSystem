@@ -46,6 +46,11 @@ namespace SchoolManagementSystem
             this.aboutSchoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.updateStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateTeacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateExamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -149,9 +154,14 @@ namespace SchoolManagementSystem
             // 
             // deleteStudentToolStripMenuItem
             // 
+            this.deleteStudentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateStudentToolStripMenuItem,
+            this.updateTeacherToolStripMenuItem,
+            this.updateModuleToolStripMenuItem,
+            this.updateExamToolStripMenuItem});
             this.deleteStudentToolStripMenuItem.Name = "deleteStudentToolStripMenuItem";
-            this.deleteStudentToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
-            this.deleteStudentToolStripMenuItem.Text = "Delete Information";
+            this.deleteStudentToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.deleteStudentToolStripMenuItem.Text = "Update Details";
             this.deleteStudentToolStripMenuItem.Click += new System.EventHandler(this.deleteStudentToolStripMenuItem_Click);
             // 
             // feedbackToolStripMenuItem
@@ -182,11 +192,48 @@ namespace SchoolManagementSystem
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Location = new System.Drawing.Point(323, 363);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 38);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Welcome";
+            // 
+            // updateStudentToolStripMenuItem
+            // 
+            this.updateStudentToolStripMenuItem.Name = "updateStudentToolStripMenuItem";
+            this.updateStudentToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.updateStudentToolStripMenuItem.Text = "Update Student";
+            this.updateStudentToolStripMenuItem.Click += new System.EventHandler(this.updateStudentToolStripMenuItem_Click);
+            // 
+            // updateTeacherToolStripMenuItem
+            // 
+            this.updateTeacherToolStripMenuItem.Name = "updateTeacherToolStripMenuItem";
+            this.updateTeacherToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.updateTeacherToolStripMenuItem.Text = "Update Teacher";
+            // 
+            // updateModuleToolStripMenuItem
+            // 
+            this.updateModuleToolStripMenuItem.Name = "updateModuleToolStripMenuItem";
+            this.updateModuleToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.updateModuleToolStripMenuItem.Text = "Update Module";
+            // 
+            // updateExamToolStripMenuItem
+            // 
+            this.updateExamToolStripMenuItem.Name = "updateExamToolStripMenuItem";
+            this.updateExamToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.updateExamToolStripMenuItem.Text = "Update Exam";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 438);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Dashboard";
@@ -206,7 +253,6 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.ToolStripMenuItem newAdmissionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchStudentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchStudentToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem deleteStudentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutSchoolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -218,5 +264,11 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.ToolStripMenuItem searchTeacherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchModuleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchExamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteStudentToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem updateStudentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateTeacherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateModuleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateExamToolStripMenuItem;
     }
 }

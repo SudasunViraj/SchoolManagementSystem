@@ -79,5 +79,11 @@ namespace SchoolManagementSystem
             SearchExam obj8 = new SearchExam();
             obj8.ShowDialog();
         }
+
+        private void updateStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateStudent obj9 = new UpdateStudent();
+            obj9.ShowDialog();
+        }
     }
 }

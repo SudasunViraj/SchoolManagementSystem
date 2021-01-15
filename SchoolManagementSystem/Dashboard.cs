@@ -85,5 +85,11 @@ namespace SchoolManagementSystem
             UpdateStudent obj9 = new UpdateStudent();
             obj9.ShowDialog();
         }
+
+        private void updateTeacherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateTeacher obj10 = new UpdateTeacher();
+            obj10.ShowDialog();
+        }
     }
 }

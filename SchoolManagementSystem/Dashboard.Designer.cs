@@ -215,6 +215,7 @@ namespace SchoolManagementSystem
             this.updateTeacherToolStripMenuItem.Name = "updateTeacherToolStripMenuItem";
             this.updateTeacherToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.updateTeacherToolStripMenuItem.Text = "Update Teacher";
+            this.updateTeacherToolStripMenuItem.Click += new System.EventHandler(this.updateTeacherToolStripMenuItem_Click);
             // 
             // updateModuleToolStripMenuItem
             // 

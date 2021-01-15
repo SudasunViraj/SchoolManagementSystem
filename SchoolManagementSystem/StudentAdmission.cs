@@ -20,27 +20,34 @@ namespace SchoolManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
             {
-                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
-                con.Open();
-                
-                String sql = "INSERT INTO student(first_name,last_name,birth_date,guardian_name,student_address) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + dateTimePicker1.Text + "','" + textBox3.Text + "','" + textBox4.Text + "');";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-                String sql1 = "SELECT MAX(student_id) FROM student";
-                SqlCommand cmd1 = new SqlCommand(sql1, con);
-                SqlDataReader dr = cmd1.ExecuteReader();
-                if (dr.Read())
+                MessageBox.Show("All Fields must be filled!");
+            }
+            else
+            {
+                try
                 {
-                    MessageBox.Show("Student Data Inserted Successfully... Student ID: '" + dr.GetInt32(0) + "'");
+                    SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
+                    con.Open();
+
+                    String sql = "INSERT INTO student(first_name,last_name,birth_date,guardian_name,student_address) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + dateTimePicker1.Text + "','" + textBox3.Text + "','" + textBox4.Text + "');";
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    String sql1 = "SELECT MAX(student_id) FROM student";
+                    SqlCommand cmd1 = new SqlCommand(sql1, con);
+                    SqlDataReader dr = cmd1.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        MessageBox.Show("Student Data Inserted Successfully... Student ID: '" + dr.GetInt32(0) + "'");
+                    }
+                    this.Close();
                 }
-                this.Close();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }   
         }
 
         private void button2_Click(object sender, EventArgs e)

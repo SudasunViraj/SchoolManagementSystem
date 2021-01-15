@@ -20,26 +20,33 @@ namespace SchoolManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox1.Text == "" || textBox2.Text == "")
             {
-                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
-                con.Open();
-
-                String sql = "INSERT INTO module(module_name,module_periods) VALUES('" + textBox1.Text + "','" + textBox2.Text + "');";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-                String sql1 = "SELECT MAX(module_id) FROM module";
-                SqlCommand cmd1 = new SqlCommand(sql1, con);
-                SqlDataReader dr = cmd1.ExecuteReader();
-                if (dr.Read())
-                {
-                    MessageBox.Show("Module Data Inserted Successfully... Module ID: '" + dr.GetInt32(0) + "'");
-                }
-                this.Close();
+                MessageBox.Show("All Fields must be filled!");
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
+                    con.Open();
+
+                    String sql = "INSERT INTO module(module_name,module_periods) VALUES('" + textBox1.Text + "','" + textBox2.Text + "');";
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    String sql1 = "SELECT MAX(module_id) FROM module";
+                    SqlCommand cmd1 = new SqlCommand(sql1, con);
+                    SqlDataReader dr = cmd1.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        MessageBox.Show("Module Data Inserted Successfully... Module ID: '" + dr.GetInt32(0) + "'");
+                    }
+                    this.Close();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 

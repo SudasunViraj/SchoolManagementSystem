@@ -121,9 +121,9 @@ namespace SchoolManagementSystem
             this.label3.Location = new System.Drawing.Point(47, 187);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 24);
+            this.label3.Size = new System.Drawing.Size(114, 24);
             this.label3.TabIndex = 34;
-            this.label3.Text = "Full Name";
+            this.label3.Text = "Full Name*";
             // 
             // textBox3
             // 
@@ -167,9 +167,9 @@ namespace SchoolManagementSystem
             this.label4.Location = new System.Drawing.Point(47, 238);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 24);
+            this.label4.Size = new System.Drawing.Size(88, 24);
             this.label4.TabIndex = 35;
-            this.label4.Text = "Gender";
+            this.label4.Text = "Gender*";
             // 
             // textBox5
             // 

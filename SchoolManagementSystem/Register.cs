@@ -20,43 +20,53 @@ namespace SchoolManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
-            con.Open();
-            string gender = string.Empty;
-            if (radioButton1.Checked)
+            if(textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
             {
-                gender = "Male";
+                MessageBox.Show("All Fields must be filled!");
+            }else if(!(radioButton1.Checked || radioButton2.Checked))
+            {
+                MessageBox.Show("A gender must be selected!");
             }
-            else if (radioButton2.Checked)
+            else
             {
-                gender = "Female";
-            }
-            try
-            {
-                String uname = textBox1.Text;
-                string str = " INSERT INTO employee(uname,pword,fname,gender,email,mobile) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + gender + "','" + textBox4.Text + "','" + textBox5.Text + "'); ";
-
-                SqlCommand cmd = new SqlCommand(str, con);
-                cmd.ExecuteNonQuery();
-
-                string str1 = "SELECT uname FROM employee WHERE uname='"+uname+"';";
-
-                SqlCommand cmd1 = new SqlCommand(str1, con);
-                SqlDataReader dr = cmd1.ExecuteReader();
-                if (dr.Read())
+                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
+                con.Open();
+                string gender = string.Empty;
+                if (radioButton1.Checked)
                 {
-                    MessageBox.Show("Dear Employee, Your Username is '" + dr.GetString(0) + "'. Your have Registered Successfully...");
-                    this.Hide();
-                    Dashboard obj2 = new Dashboard();
-                    obj2.ShowDialog();
+                    gender = "Male";
                 }
-                this.Close();
-            }
-            catch (SqlException excep)
-            {
-                MessageBox.Show(excep.Message);
-            }
-            con.Close();
+                else if (radioButton2.Checked)
+                {
+                    gender = "Female";
+                }
+                try
+                {
+                    String uname = textBox1.Text;
+                    string str = " INSERT INTO employee(uname,pword,fname,gender,email,mobile) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + gender + "','" + textBox4.Text + "','" + textBox5.Text + "'); ";
+
+                    SqlCommand cmd = new SqlCommand(str, con);
+                    cmd.ExecuteNonQuery();
+
+                    string str1 = "SELECT uname FROM employee WHERE uname='" + uname + "';";
+
+                    SqlCommand cmd1 = new SqlCommand(str1, con);
+                    SqlDataReader dr = cmd1.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        MessageBox.Show("Dear Employee, Your Username is '" + dr.GetString(0) + "'. Your have Registered Successfully...");
+                        this.Hide();
+                        Dashboard obj2 = new Dashboard();
+                        obj2.ShowDialog();
+                    }
+                    this.Close();
+                }
+                catch (SqlException excep)
+                {
+                    MessageBox.Show(excep.Message);
+                }
+                con.Close();
+            }    
         }
 
         private void button2_Click(object sender, EventArgs e)

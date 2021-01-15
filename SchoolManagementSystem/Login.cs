@@ -25,21 +25,29 @@ namespace SchoolManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
-            con.Open();
-            string str = "SELECT uname FROM employee WHERE uname = '" + textBox1.Text + "' and pword = '" + textBox2.Text + "'";
-            SqlCommand cmd = new SqlCommand(str, con);
-            SqlDataReader dr;
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
+            if(textBox1.Text == "" || textBox2.Text == "")
             {
-                this.Visible = false;
-                Dashboard obj2 = new Dashboard();
-                obj2.ShowDialog();
+                MessageBox.Show("All fields are required!");
             }
             else
             {
-                MessageBox.Show("Invalid Username and Password.");
+                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
+                con.Open();
+                string str = "SELECT uname FROM employee WHERE uname = '" + textBox1.Text + "' and pword = '" + textBox2.Text + "'";
+                SqlCommand cmd = new SqlCommand(str, con);
+                SqlDataReader dr;
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    this.Visible = false;
+                    Dashboard obj2 = new Dashboard();
+                    obj2.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username and Password.");
+                }
+                con.Close();
             }
         }
 

@@ -115,5 +115,17 @@ namespace SchoolManagementSystem
             TeacherAudit obj14 = new TeacherAudit();
             obj14.ShowDialog();
         }
+
+        private void examAuditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExamAudit obj15 = new ExamAudit();
+            obj15.ShowDialog();
+        }
+
+        private void updateExamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateExam obj16 = new UpdateExam();
+            obj16.ShowDialog();
+        }
     }
 }

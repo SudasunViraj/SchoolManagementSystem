@@ -61,6 +61,12 @@
     <Compile Include="ExamAdmission.Designer.cs">
       <DependentUpon>ExamAdmission.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExamAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamAudit.Designer.cs">
+      <DependentUpon>ExamAudit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>sclmgtsys_dbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sclmgtsys_dbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sclmgtsys_dbDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="SearchExam.cs">
       <SubType>Form</SubType>
@@ -151,6 +162,12 @@
     <Compile Include="TeacherAudit.Designer.cs">
       <DependentUpon>TeacherAudit.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateExam.Designer.cs">
+      <DependentUpon>UpdateExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExamAdmission.resx">
       <DependentUpon>ExamAdmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamAudit.resx">
+      <DependentUpon>ExamAudit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -223,6 +243,9 @@
     <EmbeddedResource Include="TeacherAudit.resx">
       <DependentUpon>TeacherAudit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateExam.resx">
+      <DependentUpon>UpdateExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateStudent.resx">
       <DependentUpon>UpdateStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +285,17 @@
     </None>
     <None Include="sclmgtsys_dbDataSet1.xss">
       <DependentUpon>sclmgtsys_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sclmgtsys_dbDataSet2.xsc">
+      <DependentUpon>sclmgtsys_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sclmgtsys_dbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sclmgtsys_dbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sclmgtsys_dbDataSet2.xss">
+      <DependentUpon>sclmgtsys_dbDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

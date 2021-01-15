@@ -42,17 +42,19 @@ namespace SchoolManagementSystem
             this.searchModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchExamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateTeacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentAgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentAuditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teacherAuditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSchoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.updateStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateTeacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.studentAgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.studentAuditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teacherAuditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.examAuditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateExamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -159,21 +161,65 @@ namespace SchoolManagementSystem
             this.deleteStudentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateStudentToolStripMenuItem,
             this.updateTeacherToolStripMenuItem,
-            this.updateModuleToolStripMenuItem});
+            this.updateModuleToolStripMenuItem,
+            this.updateExamToolStripMenuItem});
             this.deleteStudentToolStripMenuItem.Name = "deleteStudentToolStripMenuItem";
-            this.deleteStudentToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.deleteStudentToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
             this.deleteStudentToolStripMenuItem.Text = "Update Details";
             this.deleteStudentToolStripMenuItem.Click += new System.EventHandler(this.deleteStudentToolStripMenuItem_Click);
+            // 
+            // updateStudentToolStripMenuItem
+            // 
+            this.updateStudentToolStripMenuItem.Name = "updateStudentToolStripMenuItem";
+            this.updateStudentToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.updateStudentToolStripMenuItem.Text = "Update Student";
+            this.updateStudentToolStripMenuItem.Click += new System.EventHandler(this.updateStudentToolStripMenuItem_Click);
+            // 
+            // updateTeacherToolStripMenuItem
+            // 
+            this.updateTeacherToolStripMenuItem.Name = "updateTeacherToolStripMenuItem";
+            this.updateTeacherToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.updateTeacherToolStripMenuItem.Text = "Update Teacher";
+            this.updateTeacherToolStripMenuItem.Click += new System.EventHandler(this.updateTeacherToolStripMenuItem_Click);
+            // 
+            // updateModuleToolStripMenuItem
+            // 
+            this.updateModuleToolStripMenuItem.Name = "updateModuleToolStripMenuItem";
+            this.updateModuleToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.updateModuleToolStripMenuItem.Text = "Update Module";
+            this.updateModuleToolStripMenuItem.Click += new System.EventHandler(this.updateModuleToolStripMenuItem_Click);
             // 
             // feedbackToolStripMenuItem
             // 
             this.feedbackToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentAgeToolStripMenuItem,
             this.studentAuditToolStripMenuItem,
-            this.teacherAuditToolStripMenuItem});
+            this.teacherAuditToolStripMenuItem,
+            this.examAuditToolStripMenuItem});
             this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
             this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
             this.feedbackToolStripMenuItem.Text = "Additional Functions";
+            // 
+            // studentAgeToolStripMenuItem
+            // 
+            this.studentAgeToolStripMenuItem.Name = "studentAgeToolStripMenuItem";
+            this.studentAgeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.studentAgeToolStripMenuItem.Text = "Student Age";
+            this.studentAgeToolStripMenuItem.Click += new System.EventHandler(this.studentAgeToolStripMenuItem_Click);
+            // 
+            // studentAuditToolStripMenuItem
+            // 
+            this.studentAuditToolStripMenuItem.Name = "studentAuditToolStripMenuItem";
+            this.studentAuditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.studentAuditToolStripMenuItem.Text = "Student Audit";
+            this.studentAuditToolStripMenuItem.Click += new System.EventHandler(this.studentAuditToolStripMenuItem_Click);
+            // 
+            // teacherAuditToolStripMenuItem
+            // 
+            this.teacherAuditToolStripMenuItem.Name = "teacherAuditToolStripMenuItem";
+            this.teacherAuditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.teacherAuditToolStripMenuItem.Text = "Teacher Audit";
+            this.teacherAuditToolStripMenuItem.Click += new System.EventHandler(this.teacherAuditToolStripMenuItem_Click);
             // 
             // aboutSchoolToolStripMenuItem
             // 
@@ -208,47 +254,19 @@ namespace SchoolManagementSystem
             this.label1.TabIndex = 3;
             this.label1.Text = "Welcome";
             // 
-            // updateStudentToolStripMenuItem
+            // examAuditToolStripMenuItem
             // 
-            this.updateStudentToolStripMenuItem.Name = "updateStudentToolStripMenuItem";
-            this.updateStudentToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.updateStudentToolStripMenuItem.Text = "Update Student";
-            this.updateStudentToolStripMenuItem.Click += new System.EventHandler(this.updateStudentToolStripMenuItem_Click);
+            this.examAuditToolStripMenuItem.Name = "examAuditToolStripMenuItem";
+            this.examAuditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.examAuditToolStripMenuItem.Text = "Exam Audit";
+            this.examAuditToolStripMenuItem.Click += new System.EventHandler(this.examAuditToolStripMenuItem_Click);
             // 
-            // updateTeacherToolStripMenuItem
+            // updateExamToolStripMenuItem
             // 
-            this.updateTeacherToolStripMenuItem.Name = "updateTeacherToolStripMenuItem";
-            this.updateTeacherToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.updateTeacherToolStripMenuItem.Text = "Update Teacher";
-            this.updateTeacherToolStripMenuItem.Click += new System.EventHandler(this.updateTeacherToolStripMenuItem_Click);
-            // 
-            // updateModuleToolStripMenuItem
-            // 
-            this.updateModuleToolStripMenuItem.Name = "updateModuleToolStripMenuItem";
-            this.updateModuleToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.updateModuleToolStripMenuItem.Text = "Update Module";
-            this.updateModuleToolStripMenuItem.Click += new System.EventHandler(this.updateModuleToolStripMenuItem_Click);
-            // 
-            // studentAgeToolStripMenuItem
-            // 
-            this.studentAgeToolStripMenuItem.Name = "studentAgeToolStripMenuItem";
-            this.studentAgeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.studentAgeToolStripMenuItem.Text = "Student Age";
-            this.studentAgeToolStripMenuItem.Click += new System.EventHandler(this.studentAgeToolStripMenuItem_Click);
-            // 
-            // studentAuditToolStripMenuItem
-            // 
-            this.studentAuditToolStripMenuItem.Name = "studentAuditToolStripMenuItem";
-            this.studentAuditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.studentAuditToolStripMenuItem.Text = "Student Audit";
-            this.studentAuditToolStripMenuItem.Click += new System.EventHandler(this.studentAuditToolStripMenuItem_Click);
-            // 
-            // teacherAuditToolStripMenuItem
-            // 
-            this.teacherAuditToolStripMenuItem.Name = "teacherAuditToolStripMenuItem";
-            this.teacherAuditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.teacherAuditToolStripMenuItem.Text = "Teacher Audit";
-            this.teacherAuditToolStripMenuItem.Click += new System.EventHandler(this.teacherAuditToolStripMenuItem_Click);
+            this.updateExamToolStripMenuItem.Name = "updateExamToolStripMenuItem";
+            this.updateExamToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.updateExamToolStripMenuItem.Text = "Update Exam";
+            this.updateExamToolStripMenuItem.Click += new System.EventHandler(this.updateExamToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
@@ -294,5 +312,7 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.ToolStripMenuItem studentAgeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem studentAuditToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem teacherAuditToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem examAuditToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateExamToolStripMenuItem;
     }
 }

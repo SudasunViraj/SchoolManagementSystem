@@ -31,19 +31,19 @@ namespace SchoolManagementSystem
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sclmgtsys_dbDataSet = new SchoolManagementSystem.sclmgtsys_dbDataSet();
-            this.studentauditBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.student_auditTableAdapter = new SchoolManagementSystem.sclmgtsys_dbDataSetTableAdapters.student_auditTableAdapter();
             this.changeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guardiannameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updatedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentauditBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sclmgtsys_dbDataSet = new SchoolManagementSystem.sclmgtsys_dbDataSet();
+            this.student_auditTableAdapter = new SchoolManagementSystem.sclmgtsys_dbDataSetTableAdapters.student_auditTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sclmgtsys_dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentauditBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sclmgtsys_dbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -64,20 +64,6 @@ namespace SchoolManagementSystem
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1092, 229);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // sclmgtsys_dbDataSet
-            // 
-            this.sclmgtsys_dbDataSet.DataSetName = "sclmgtsys_dbDataSet";
-            this.sclmgtsys_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentauditBindingSource
-            // 
-            this.studentauditBindingSource.DataMember = "student_audit";
-            this.studentauditBindingSource.DataSource = this.sclmgtsys_dbDataSet;
-            // 
-            // student_auditTableAdapter
-            // 
-            this.student_auditTableAdapter.ClearBeforeFill = true;
             // 
             // changeidDataGridViewTextBoxColumn
             // 
@@ -128,6 +114,20 @@ namespace SchoolManagementSystem
             this.operationDataGridViewTextBoxColumn.Name = "operationDataGridViewTextBoxColumn";
             this.operationDataGridViewTextBoxColumn.Width = 125;
             // 
+            // studentauditBindingSource
+            // 
+            this.studentauditBindingSource.DataMember = "student_audit";
+            this.studentauditBindingSource.DataSource = this.sclmgtsys_dbDataSet;
+            // 
+            // sclmgtsys_dbDataSet
+            // 
+            this.sclmgtsys_dbDataSet.DataSetName = "sclmgtsys_dbDataSet";
+            this.sclmgtsys_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // student_auditTableAdapter
+            // 
+            this.student_auditTableAdapter.ClearBeforeFill = true;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -148,11 +148,12 @@ namespace SchoolManagementSystem
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dataGridView1);
             this.Name = "StudentAudit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentAudit";
             this.Load += new System.EventHandler(this.StudentAudit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sclmgtsys_dbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentauditBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sclmgtsys_dbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

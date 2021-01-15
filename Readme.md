@@ -12,6 +12,10 @@ PASSWORD : pass
 
 >> Change Datasource to your own SQL server name in all modules!
 
+```c#
+SqlConnection con = new SqlConnection(@"Data Source='Change Here';Initial Catalog=sclmgtsys_db;Integrated Security=True;");
+```
+
 **WITHOUT CHANGING DATASOURCE, THE SYSTEM WON'T RUN** 
 
 >> Database File is inside : \SchoolManagementSystem\sclmgtsys_db.mdf 

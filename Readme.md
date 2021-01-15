@@ -18,11 +18,11 @@ PASSWORD : pass
 
 ## Languages Used
 
-..* C#
-..* SQL
+* C#
+* SQL
 
 ## Resources
 
-..* [Images](https://www.iconfinder.com/families/microworld)
+* [Images](https://www.iconfinder.com/families/microworld)
 
 

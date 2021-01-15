@@ -97,5 +97,11 @@ namespace SchoolManagementSystem
             UpdateSubject obj11 = new UpdateSubject();
             obj11.ShowDialog();
         }
+
+        private void studentAgeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StudentAgeCalc obj12 = new StudentAgeCalc();
+            obj12.ShowDialog();
+        }
     }
 }

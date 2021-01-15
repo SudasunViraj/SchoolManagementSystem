@@ -91,6 +91,12 @@
     <Compile Include="SearchTeacher.Designer.cs">
       <DependentUpon>SearchTeacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentAgeCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAgeCalc.Designer.cs">
+      <DependentUpon>StudentAgeCalc.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubjectAssign.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchTeacher.resx">
       <DependentUpon>SearchTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAgeCalc.resx">
+      <DependentUpon>StudentAgeCalc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectAssign.resx">
       <DependentUpon>SubjectAssign.cs</DependentUpon>

@@ -8,8 +8,13 @@ USERNAME : admin
 PASSWORD : pass
 ```
 
-## or simply register your own username and password 
+## or simply register your own username and password
 
+## Instructions
+
+>> Attach given Database files to your SQL server.
+
+>> In Visual Studio open the Project and do following change to backend.
 >> Change Datasource to your own SQL server name in all modules!
 
 ```c#

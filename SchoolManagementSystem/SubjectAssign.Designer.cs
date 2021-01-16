@@ -29,6 +29,7 @@ namespace SchoolManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubjectAssign));
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -42,7 +43,19 @@ namespace SchoolManagementSystem
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sclmgtsys_dbDataSet3 = new SchoolManagementSystem.sclmgtsys_dbDataSet3();
+            this.teachermoduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.teacher_moduleTableAdapter = new SchoolManagementSystem.sclmgtsys_dbDataSet3TableAdapters.teacher_moduleTableAdapter();
+            this.moduleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modulenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacheridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teachernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sclmgtsys_dbDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachermoduleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -99,6 +112,7 @@ namespace SchoolManagementSystem
             this.button2.TabIndex = 96;
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -112,12 +126,13 @@ namespace SchoolManagementSystem
             this.button1.TabIndex = 95;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 185);
+            this.label3.Location = new System.Drawing.Point(29, 132);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 24);
@@ -137,7 +152,7 @@ namespace SchoolManagementSystem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 132);
+            this.label2.Location = new System.Drawing.Point(29, 190);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 24);
@@ -173,11 +188,90 @@ namespace SchoolManagementSystem
             this.textBox4.Size = new System.Drawing.Size(231, 29);
             this.textBox4.TabIndex = 101;
             // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(496, 262);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(172, 66);
+            this.button3.TabIndex = 102;
+            this.button3.Text = "Search Subject and Teacher";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.moduleidDataGridViewTextBoxColumn,
+            this.modulenameDataGridViewTextBoxColumn,
+            this.teacheridDataGridViewTextBoxColumn,
+            this.teachernameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.teachermoduleBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 352);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(648, 150);
+            this.dataGridView1.TabIndex = 103;
+            // 
+            // sclmgtsys_dbDataSet3
+            // 
+            this.sclmgtsys_dbDataSet3.DataSetName = "sclmgtsys_dbDataSet3";
+            this.sclmgtsys_dbDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // teachermoduleBindingSource
+            // 
+            this.teachermoduleBindingSource.DataMember = "teacher_module";
+            this.teachermoduleBindingSource.DataSource = this.sclmgtsys_dbDataSet3;
+            // 
+            // teacher_moduleTableAdapter
+            // 
+            this.teacher_moduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // moduleidDataGridViewTextBoxColumn
+            // 
+            this.moduleidDataGridViewTextBoxColumn.DataPropertyName = "module_id";
+            this.moduleidDataGridViewTextBoxColumn.HeaderText = "module_id";
+            this.moduleidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.moduleidDataGridViewTextBoxColumn.Name = "moduleidDataGridViewTextBoxColumn";
+            this.moduleidDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // modulenameDataGridViewTextBoxColumn
+            // 
+            this.modulenameDataGridViewTextBoxColumn.DataPropertyName = "module_name";
+            this.modulenameDataGridViewTextBoxColumn.HeaderText = "module_name";
+            this.modulenameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.modulenameDataGridViewTextBoxColumn.Name = "modulenameDataGridViewTextBoxColumn";
+            this.modulenameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // teacheridDataGridViewTextBoxColumn
+            // 
+            this.teacheridDataGridViewTextBoxColumn.DataPropertyName = "teacher_id";
+            this.teacheridDataGridViewTextBoxColumn.HeaderText = "teacher_id";
+            this.teacheridDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.teacheridDataGridViewTextBoxColumn.Name = "teacheridDataGridViewTextBoxColumn";
+            this.teacheridDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // teachernameDataGridViewTextBoxColumn
+            // 
+            this.teachernameDataGridViewTextBoxColumn.DataPropertyName = "teacher_name";
+            this.teachernameDataGridViewTextBoxColumn.HeaderText = "teacher_name";
+            this.teachernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.teachernameDataGridViewTextBoxColumn.Name = "teachernameDataGridViewTextBoxColumn";
+            this.teachernameDataGridViewTextBoxColumn.Width = 125;
+            // 
             // SubjectAssign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 360);
+            this.ClientSize = new System.Drawing.Size(686, 576);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
@@ -192,7 +286,11 @@ namespace SchoolManagementSystem
             this.Controls.Add(this.label1);
             this.Name = "SubjectAssign";
             this.Text = "ModuleAssign";
+            this.Load += new System.EventHandler(this.SubjectAssign_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sclmgtsys_dbDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachermoduleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +309,14 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private sclmgtsys_dbDataSet3 sclmgtsys_dbDataSet3;
+        private System.Windows.Forms.BindingSource teachermoduleBindingSource;
+        private sclmgtsys_dbDataSet3TableAdapters.teacher_moduleTableAdapter teacher_moduleTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn moduleidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modulenameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacheridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teachernameDataGridViewTextBoxColumn;
     }
 }

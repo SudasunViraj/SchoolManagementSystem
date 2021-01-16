@@ -88,6 +88,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sclmgtsys_dbDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="sclmgtsys_dbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sclmgtsys_dbDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SearchExam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +301,17 @@
     </None>
     <None Include="sclmgtsys_dbDataSet2.xss">
       <DependentUpon>sclmgtsys_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sclmgtsys_dbDataSet3.xsc">
+      <DependentUpon>sclmgtsys_dbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="sclmgtsys_dbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sclmgtsys_dbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sclmgtsys_dbDataSet3.xss">
+      <DependentUpon>sclmgtsys_dbDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

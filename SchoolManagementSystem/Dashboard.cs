@@ -127,5 +127,11 @@ namespace SchoolManagementSystem
             UpdateExam obj16 = new UpdateExam();
             obj16.ShowDialog();
         }
+
+        private void assignSubjectsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SubjectAssign obj17 = new SubjectAssign();
+            obj17.ShowDialog();
+        }
     }
 }

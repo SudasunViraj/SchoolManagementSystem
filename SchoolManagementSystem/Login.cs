@@ -31,7 +31,7 @@ namespace SchoolManagementSystem
             }
             else
             {
-                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
+                SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
                 con.Open();
                 string str = "SELECT uname FROM employee WHERE uname = '" + textBox1.Text + "' and pword = '" + textBox2.Text + "'";
                 SqlCommand cmd = new SqlCommand(str, con);

@@ -28,7 +28,7 @@ namespace SchoolManagementSystem
             {
                 try
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
+                    SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
                     con.Open();
 
                     String sql = "INSERT INTO student(first_name,last_name,birth_date,guardian_name,student_address) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + dateTimePicker1.Text + "','" + textBox3.Text + "','" + textBox4.Text + "');";

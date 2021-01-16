@@ -66,7 +66,7 @@ namespace SchoolManagementSystem
                     dr2 = cmd2.ExecuteReader();
                     if (dr2.Read())
                     {
-                        textBox3.Text = dr2.GetValue(0).ToString();
+                        textBox4.Text = dr2.GetValue(0).ToString();
                     }
                     dr2.Close();
                     String sql3 = "SELECT module_name FROM module WHERE module_id='" + textBox2.Text + "';";
@@ -76,7 +76,7 @@ namespace SchoolManagementSystem
                     dr3 = cmd3.ExecuteReader();
                     if (dr3.Read())
                     {
-                        textBox4.Text = dr3.GetValue(0).ToString();
+                        textBox3.Text = dr3.GetValue(0).ToString();
                     }
                     con.Close();
                 }

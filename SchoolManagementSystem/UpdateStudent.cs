@@ -27,7 +27,7 @@ namespace SchoolManagementSystem
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
+                SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
                 con.Open();
 
                 String sql = "SELECT * FROM student WHERE student_id='" + textBox1.Text + "';";
@@ -75,7 +75,7 @@ namespace SchoolManagementSystem
             }
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-8AMRJ28V;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
+                SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=sclmgtsys_db;Integrated Security=True;");
                 con.Open();
 
                 String sql = "UPDATE student SET first_name = '" + textBox2.Text + "',last_name = '" + textBox3.Text + "',birth_date = '" + textBox6.Text + "',guardian_name = '" + textBox4.Text + "',student_address = '" + textBox5.Text + "' WHERE student_id = '" + textBox1.Text + "';";
